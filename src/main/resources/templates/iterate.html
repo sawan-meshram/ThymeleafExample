@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>Going to traverse elements in Collections ...</h1>
+	<h1 th:text="${names}"></h1>
+	
+	<h3>Each Operation</h3>
+	<ul>
+		<li th:each="n: ${names}">
+			<span th:text="${n}"></span>
+		</li>
+	</ul>
+	
+	<h3>Each Operation with index number</h3>
+	<ul>
+		<li th:each="n, status : ${names}">
+			<span th:text="${status.index+1} +' ' + ${n}"></span>
+		</li>
+	</ul>
+	
+	<h3>Each Operation with style bold & odd number along with using ternary operation</h3>
+	<ul>
+		<li th:each="n, status : ${names}">
+			<span th:style="${status.odd} ?  'font-weight:bold' : ' ' " th:text="${status.index+1} +' ' + ${n}"></span>
+		</li>
+	</ul>
+	
+	
+	<h3>Each Operation with style color & odd number along with using ternary operation</h3>
+	<ul>
+		<li th:each="n, status : ${names}">
+			<span th:style="${status.odd} ?  'color:red' : ' ' " th:text="${status.index+1} +' ' + ${n}"></span>
+		</li>
+	</ul>
+	
+	<h3>Each Operation with style bold and color & odd number along with using ternary operation</h3>
+	<ul>
+		<li th:each="n, status : ${names}">
+			<span th:style="${status.odd} ?  'font-weight:bold;color:red' : ' ' " th:text="${status.index+1} +' ' + ${n}"></span>
+		</li>
+	</ul>
+	
+</body>
+</html>

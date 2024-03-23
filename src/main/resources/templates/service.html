@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Service page</title>
+</head>
+<body>
+	<h1>This are the services provided by Sawan</h1>
+	<!-- adding here footer page -->
+	<!-- syntax = th:replace="page name:: fragment name" -->
+	<!-- syntax = th:include="page name:: fragment name" -->
+	<!-- syntax = th:insert="page name:: fragment name" -->
+	<!-- <footer id="serviceId" th:replace="footer::footer1('This is title', 'This is a subtitle')"> --> <!-- th:replace="footer::footer1" --> <!-- for show on content page -->
+	
+	<footer id="serviceId" th:replace="footer::footer1(${title}, ${subtitle})">
+	</footer>
+</body>
+</html>

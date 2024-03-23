@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Footer page</title>
+</head>
+<body>
+	<!-- example on sending the dynamic details -->
+	<footer id="footerId" th:fragment="footer1(title, subtitle)"> <!-- th:fragment="footer1" --> <!-- for showing the page content -->
+		<div class="container" >
+			<h1 th:text="${title}"></h1>
+			<h2 th:text="${subtitle}"></h2>
+			<h1>About Sawan Meshram</h1>
+			<h3>Provided simple insight about Thymeleaf</h3>
+			</p>This is footer page.<p>
+		</div>
+	</footer>
+
+</body>
+</html>
