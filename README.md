@@ -111,6 +111,28 @@ Example,
 3. `${#lists.size(items)}` is used to give the size on input `List` or `Set`.
 
 
+#### How to include CSS, JS, and Image files using Thymeleaf
+
+Examples,
+
+1. **CSS**
+
+```
+<link rel="stylesheet" th:href="@{/css/mystyle.css}" />
+```
+
+2. **Image**
+
+```
+<img src="" class="profile" th:src="@{/image/Screenshot-1.png}" alt="" />
+```
+
+3. **JS**
+
+```
+<script src="" th:src="@{/js/myjs.js}"></script>
+```
+
 ### Result
 
 To view the project results, then click below link.
